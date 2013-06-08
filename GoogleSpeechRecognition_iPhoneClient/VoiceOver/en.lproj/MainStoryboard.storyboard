@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Kbj-21-7Nd">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3bC-bY-wsf">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="2" id="9jU-uY-L6w"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Soc-jr-2DJ">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Google Speech To Text">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KA7-q1-qff" kind="push" id="eNM-mN-VTr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Soc-jr-2DJ" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="70c-Jz-e8i"/>
+                            <constraint firstAttribute="trailing" secondItem="Soc-jr-2DJ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Dw5-vd-sgy"/>
+                            <constraint firstAttribute="trailing" secondItem="3bC-bY-wsf" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Pns-f9-mUc"/>
+                            <constraint firstItem="3bC-bY-wsf" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fZT-rl-UzV"/>
+                            <constraint firstItem="3bC-bY-wsf" firstAttribute="top" secondItem="3" secondAttribute="top" constant="153" id="g11-NJ-Ueo"/>
+                            <constraint firstAttribute="bottom" secondItem="Soc-jr-2DJ" secondAttribute="bottom" constant="28" id="o8P-Vv-W5S"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8UP-wZ-BL8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="420" y="53"/>
+        </scene>
+        <!--Google Speech To Text View Controller - Speech To Text-->
+        <scene sceneID="0BY-sE-VeN">
+            <objects>
+                <viewController id="KA7-q1-qff" customClass="GoogleSpeechToTextViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xhn-dx-Kjl">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dal-mA-oMA">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Start Speech To Text">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startSpeechToTextButtonTaped:" destination="KA7-q1-qff" eventType="touchUpInside" id="uOb-ho-IFe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a42-hd-dMV">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonTaped:" destination="KA7-q1-qff" eventType="touchUpInside" id="lnD-IY-7sR"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fyb-Oo-iuI">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="177" id="15B-Dh-1jL"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Input Display Here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rgs-0Z-4qm">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="2Kr-JC-qd4"/>
+                                    <constraint firstAttribute="width" constant="273" id="4d5-ql-v6K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="a42-hd-dMV" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4VN-2b-75C"/>
+                            <constraint firstAttribute="trailing" secondItem="rgs-0Z-4qm" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="6mI-Db-czn"/>
+                            <constraint firstAttribute="trailing" secondItem="Fyb-Oo-iuI" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Aer-sq-6GH"/>
+                            <constraint firstItem="Fyb-Oo-iuI" firstAttribute="leading" secondItem="xhn-dx-Kjl" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Iw9-ow-zRC"/>
+                            <constraint firstItem="a42-hd-dMV" firstAttribute="baseline" secondItem="dal-mA-oMA" secondAttribute="baseline" type="default" id="VD0-QE-ruW"/>
+                            <constraint firstItem="dal-mA-oMA" firstAttribute="top" secondItem="xhn-dx-Kjl" secondAttribute="top" constant="224" id="Z5f-TG-aHA"/>
+                            <constraint firstItem="rgs-0Z-4qm" firstAttribute="leading" secondItem="dal-mA-oMA" secondAttribute="leading" type="default" id="ZPg-gU-gzS"/>
+                            <constraint firstAttribute="bottom" secondItem="rgs-0Z-4qm" secondAttribute="bottom" constant="64" id="bkA-fT-aq8"/>
+                            <constraint firstItem="Fyb-Oo-iuI" firstAttribute="top" secondItem="xhn-dx-Kjl" secondAttribute="top" constant="20" symbolic="YES" type="default" id="kCC-Zz-grp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Speech To Text" id="tT5-lU-fiT"/>
+                    <connections>
+                        <outlet property="inputContentLabel" destination="rgs-0Z-4qm" id="Uxx-M4-9nv"/>
+                        <outlet property="inputTextView" destination="Fyb-Oo-iuI" id="I9v-Wn-alH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dd3-Kh-CaX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921" y="-352"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rdk-J5-hQa">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Kbj-21-7Nd" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wLi-J4-5Fp">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="RrJ-BW-w4x"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BIq-tS-zcP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5" y="53"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="GoogleSpeechToTextViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoogleSpeechToTextViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="inputContentLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="inputTextView" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
